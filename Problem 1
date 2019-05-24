@@ -1,0 +1,42 @@
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+	int counter, mx, v, sum = 0, total, arr[10] ;
+	float average;
+	
+	cout<< " enter 10 numbers: "<<endl;
+
+		for(counter = 0; counter < 10; counter++)
+	arr[counter] = 0;
+	
+	for(counter = 0; counter < 10; counter++)
+	
+	cin>>arr[counter];
+
+	mx = arr[0];
+	for(counter = 0; counter < 10 ; counter++)
+	{
+		if(mx < arr[counter])
+		mx = arr[counter];
+}
+v= arr[0];
+for(counter = 0; counter < 10 ; counter++)
+{
+		if(v > arr[counter])
+		v = arr[counter];
+	}
+	for(counter = 0; counter < 10 ; counter++)
+	{
+	total += arr[counter];	
+	average = (total / 10);	
+}
+
+	cout<< " the largest is: "<< mx <<endl;
+	cout<<" the smallest is: "<<v<<endl;
+	cout<< " the total is: "<<total<<endl;
+	cout<<" the average is: "<<average<<endl;
+	return 0;
+}
