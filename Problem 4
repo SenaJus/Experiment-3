@@ -1,0 +1,57 @@
+
+#include <iostream>
+
+using namespace std;
+const int p = 3;
+const int w = 7;
+
+int main()
+{
+    int Temp[p][w];
+    cout << "Enter temperatures of Province A, Province B and then Province C for one week: "<<endl;
+    for (int i = 0; i < p; ++i)
+    {
+    for(int j = 0; j < w; ++j)
+    {
+    if ( i == 0)
+    {
+    cout << "Province A, Day " << j + 1 << ": ";
+    cin >> Temp[i][j];
+    }
+    else if ( i == 1)
+    {
+    cout << "Province B, Day " << j + 1 << ": ";
+    cin >> Temp[i][j];	
+    }
+    else
+    {
+    cout << "Province C, Day " << j + 1 << ": ";
+    cin >> Temp[i][j];	
+    }
+    }
+    }
+    cout << " " << endl;
+    cout << "Displaying Values: "<<endl;
+
+    for (int i = 0; i < p; ++i)
+    {
+    for(int j = 0; j < w; ++j)
+    {
+    if ( i == 0)
+    {
+    cout << "Province A, Day " << j + 1 << "= " << Temp[i][j] << endl;
+    }
+    else if ( i == 1)
+    {
+    cout << "Province B, Day " << j + 1 << "= " << Temp[i][j] << endl;
+    }
+    else
+    {
+    cout << "Province C, Day " << j + 1 << "= " << Temp[i][j] << endl;	
+    }
+    }
+    }
+
+	
+    return 0;
+}
