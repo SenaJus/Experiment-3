@@ -1,0 +1,65 @@
+#include <iostream>
+
+
+using namespace std;
+
+int main ()
+{
+	int i, j, n, v, r, a, s, w, numbers[100];
+
+	char text[100];
+	
+	cout << "enter how many numbers:";
+	cin >> i;	
+	cout << "enter numbers:"<<endl;
+	
+	for (j = 0; j < i; j++)
+	{
+		cin >> numbers[j];
+	}
+	for (j = 0; j < i; j++)
+	{
+	for(n = (j + 1); n < i; n++)
+	{
+	if(numbers[j] > numbers[n])
+	{
+	v = numbers[j];
+	numbers[j] = numbers[n];
+	numbers[n] = v;
+	}
+	}
+	}
+        cout << "\nafter sorting:\n";
+	for(j = 0; j < i; j++)
+	{
+	cout << numbers[j] << " ";
+	}
+	cout << "\nenter how many letters:";
+	cin >> s;
+	cout << "enter letters: "<<endl;
+	
+	for (w = 0; w < s; w++)
+	{
+	cin >> text[w];
+	}	
+	for (w = 0; w < s; w++)
+	{
+	for(a = w + 1; a < s; a++)
+	{
+	if(text[w] > text[a])
+	{
+	r = text[w];
+	text[w] = text[a];
+	text[a] = r;
+	}
+	}
+	}
+	cout << "\nafter sorting:\n";
+	for (w = 0; w < s; w++)
+	{
+	cout << text[w] << " " ;
+	}	
+	
+	return 0;
+	
+}
